@@ -25,6 +25,9 @@ We can think of our UI as 4 rows so define it as such
 
 We can add common colors to Colors.xaml
 
+BindingContext in the MainPage constructor was throwing an error. Had to register the page and the ViewModel in DI to get it working
+
+
 
 
 
