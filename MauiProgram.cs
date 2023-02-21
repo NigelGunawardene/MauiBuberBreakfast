@@ -1,4 +1,6 @@
-﻿namespace MauiBuberBreakfast;
+﻿using MauiBuberBreakfast.ViewModels;
+
+namespace MauiBuberBreakfast;
 
 public static class MauiProgram
 {
@@ -12,6 +14,9 @@ public static class MauiProgram
                 fonts.AddFont("Roboto-Bold.ttf", "Roboto-Bold");
                 fonts.AddFont("Roboto-Regular.ttf", "Roboto-Regular");
             });
+
+        builder.Services.AddTransient<MainPage>();
+        builder.Services.AddTransient<MyBreakfastsViewModel>();
 
         return builder.Build();
     }
