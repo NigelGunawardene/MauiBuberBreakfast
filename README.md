@@ -27,8 +27,17 @@ We can add common colors to Colors.xaml
 
 BindingContext in the MainPage constructor was throwing an error. Had to register the page and the ViewModel in DI to get it working
 
+We wrap our dinners area in a RefreshView tag. Then we add the RelayCommand annotation on the method called LoadBreakfasts and set LoadBreakfastsCommand as the Command when we execute the refresh
 
+Now we create a converter for the date
+Install CommunityToolkit.Maui nguet package
 
+Create DateTimeToBreakfastDayConverter : BaseConverter<object, string>
+
+After creating our 2 converters, we need to include them in the static resource dictionary (in styles.xaml) and then invoke them on the relevant parameters in the view and manipulate the UI
+Then go to Program.cs and add UseMauiCommunityToolkit
+
+Then update our xaml to use the converters
 
 
 

@@ -54,7 +54,13 @@
                                     <Label Text="{Binding Name}" FontSize="24" FontFamily="RobotoBold"/>
 
                                     <!--Start and End DateTime-->
-                                    <Label Grid.Row="1" Text="Placeholder" FontSize="16"/>
+                                    <FlexLayout Grid.Row="1" Wrap="Wrap" AlignItems="Start">
+                                        <Label Text="{Binding StartDateTime, Converter={StaticResource DateTimeToBreakfastDayConverter}}" FontSize="16"/>
+                                        <Label Text=", "/>
+                                        <Label Text="{Binding StartDateTime, Converter={StaticResource DateTimeToTimeConverter}}" FontSize="16"/>
+                                        <Label Text=" - "/>
+                                        <Label Text="{Binding EndDateTime, Converter={StaticResource DateTimeToTimeConverter}}" FontSize="16"/>
+                                    </FlexLayout>
 
                                     <!--Description-->
                                     <Label Grid.Row="2" Text="{Binding Description}" FontSize="16" Padding="0,8,0,0" TextColor="#555"/>
